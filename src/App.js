@@ -1,10 +1,12 @@
 import './App.css';
+import Difference from './components/difference/difference'
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <>
+      <h1>hello</h1>
+      <Difference/>
+    </>
   );
 }
 
