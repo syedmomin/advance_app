@@ -1,32 +1,37 @@
 import PropTypes from 'prop-types';
+import Table from 'react-bootstrap/Table';
 
 export const Difference = () => {
     return (
         <>
             <h1>Diffrenece Between Class and Functional Component</h1>
-            <table border={2}>
-                <tr>
-                    <th>Functional Components In React JS</th>
-                    <th>Functional Components In React JS</th>
-                </tr>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>Components are just like functions that return HTML elements.</li>
-                            <li>In older React code bases, you may find Class components primarily used.</li>
-                            <li>In React JS, it is now suggested to use Function components, which were added in React 16.8.</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>In React JS, these components are simple classes (made up of multiple functions that add functionality to the application).</li>
-                            <li>In React JS, all class based components are child classes for the Component class of ReactJS (React.Component)..</li>
-                            <li>In React JS, the class must implement a render() member function which returns a React component to be rendered, similar to a return value of a functional component.</li>
-                            <li>In React JS, component name always starts with Capital Letter .</li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
+            <Table striped bordered >
+                <thead>
+                    <tr>
+                        <th>Functional Components In React JS</th>
+                        <th>Class Components In React JS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Components are just like functions that return HTML elements.</li>
+                                <li>In older React code bases, you may find Class components primarily used.</li>
+                                <li>In React JS, it is now suggested to use Function components, which were added in React 16.8.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>In React JS, these components are simple classes (made up of multiple functions that add functionality to the application).</li>
+                                <li>In React JS, all class based components are child classes for the Component class of ReactJS (React.Component)..</li>
+                                <li>In React JS, the class must implement a render() member function which returns a React component to be rendered, similar to a return value of a functional component.</li>
+                                <li>In React JS, component name always starts with Capital Letter .</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </Table>
         </>
     );
 }
@@ -48,10 +53,10 @@ export const PropsType = (props) => {
         </>
     )
 }
-PropsType.prototype={
-    name :PropTypes.string,
-    desi :PropTypes.string,
-    age :PropTypes.number
+PropsType.prototype = {
+    name: PropTypes.string,
+    desi: PropTypes.string,
+    age: PropTypes.number
 }
 
 
