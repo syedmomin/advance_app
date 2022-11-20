@@ -18,7 +18,12 @@ export const Difference = () => {
                         </ul>
                     </td>
                     <td>
-                        Latter
+                        <ul>
+                            <li>In React JS, these components are simple classes (made up of multiple functions that add functionality to the application).</li>
+                            <li>In React JS, all class based components are child classes for the Component class of ReactJS (React.Component)..</li>
+                            <li>In React JS, the class must implement a render() member function which returns a React component to be rendered, similar to a return value of a functional component.</li>
+                            <li>In React JS, component name always starts with Capital Letter .</li>
+                        </ul>
                     </td>
                 </tr>
             </table>
@@ -43,10 +48,10 @@ export const PropsType = (props) => {
         </>
     )
 }
+PropsType.prototype={
+    name :PropTypes.string,
+    desi :PropTypes.string,
+    age :PropTypes.number
+}
 
-// PropsType.PropTypes = {
-//     name: PropTypes.string.isRequired,
-//     desi: PropTypes.string.isRequired,
-//     age: PropTypes.number.isRequired
-//     }
-    
+
