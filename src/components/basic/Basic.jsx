@@ -48,7 +48,7 @@ export const PropsDes = (props) => {
 export const PropsType = (props) => {
     return (
         <>
-            <h4>Props Type</h4>
+            <h1>Props Type Validation</h1>
             <h2>My name is {props.name} {props.desi} and age {props.age}</h2>
         </>
     )
@@ -59,4 +59,13 @@ PropsType.prototype = {
     age: PropTypes.number
 }
 
-
+export const Constructor = () => {
+    // Constructor(){
+    // }
+    return (
+        <>
+            <h1>Define Constructor</h1>
+          
+        </>
+    )
+}

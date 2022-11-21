@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import {Difference,PropsDes,PropsType} from "./components/basic/Basic";
+import {Difference,PropsDes,PropsType,Constructor} from "./components/basic/Basic";
 
 function App() {  
   const sideBarMenu = [
@@ -23,7 +23,7 @@ function App() {
     {
         path: "/contractor",
         name: "constructor",
-        componentName: <PropsType name="syed" desi="developer" age={21}/>
+        componentName: <Constructor/>
     }
 ]
 
