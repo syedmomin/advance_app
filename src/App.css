@@ -11,16 +11,20 @@
   }
 
   .sidenav .sideheader{
-    text-decoration:underline;
-    font-size: 22px;
+    /* text-decoration:underline; */
+    font-size: 20px;
     color: #ffffff;
+    padding: 15px 5px;
+    border: 2px solid;
   }
   .sidenav .sideLink {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #818181;
     display: block;
+    background-color: black;
+    border-bottom: 1px solid;
   }
   
   .sidenav .sideLink:hover {
