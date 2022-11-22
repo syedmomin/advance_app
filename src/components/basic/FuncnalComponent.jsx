@@ -59,13 +59,25 @@ PropsType.prototype = {
     age: PropTypes.number
 }
 
+class Student {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
 export const Constructor = () => {
-    // Constructor(){
-    // }
+
+    const std = new Student("Momin", 21);
+    // console.log(std.name);
     return (
         <>
             <h1>Define Constructor</h1>
-          
+            <ul>
+                <li>  In React JS, the constructor is a method used to initialize an object’s state in a class.</li>
+                <li>In React JS, constructor automatically called during the creation of an object in a class.</li>
+            </ul>
+            <h3>Class Constructor({std.name}--{std.age})</h3>
+
         </>
     )
 }
