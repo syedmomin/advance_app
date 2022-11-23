@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import {Difference,PropsDes,PropsType,Constructor,} from "./components/basic/FuncnalComponent";
-import ClassConstructor from "./components/basic/ClassComponent";
+import {Difference,PropsDes,PropsType,Constructor,HookState} from "./components/basic/FuncnalComponent";
+import {ClassConstructor,ClassState,ClassEvent} from "./components/basic/ClassComponent";
 
 function App() {  
   const sideBarMenu = [
@@ -33,7 +33,27 @@ function App() {
     {
         path: "/state",
         name: "state",
-        componentName: <Constructor/>
+        componentName: <ClassState/>
+    },
+    {
+        path: "/hook",
+        name: "hooks",
+        componentName: <HookState/>
+    },
+    {
+        path: "/event",
+        name: "event handle",
+        componentName: <ClassEvent name="momin"/>
+    },
+    {
+        path: "/lifecyle",
+        name: "life cycle",
+        componentName: <ClassEvent name="momin"/>
+    },
+    {
+        path: "/phase",
+        name: "phase",
+        componentName: <ClassEvent name="momin"/>
     }
 ]
 

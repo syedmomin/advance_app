@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class ClassConstructor extends Component {
+export class ClassConstructor extends Component {
     constructor(props) {
         super(props);
         console.log("Constructor From Developer");
@@ -19,3 +19,40 @@ export default class ClassConstructor extends Component {
         )
     }
 }
+
+
+
+export class ClassState extends Component {
+    constructor() {
+        super()
+        this.state = {
+            name: "Momin",
+            age: 27
+        }
+    }
+    render() {
+        const { name, age } = this.state
+        return (
+            <div>
+                <h3>State in react</h3>
+                <h1>{name}</h1>
+                <h1>{age}</h1>
+            </div>
+        )
+    }
+}
+
+export class ClassEvent extends Component {
+
+    render() {
+        const HelloFunction = (name) => {
+            alert("Hello " + name);
+        }
+        return (
+            <div>
+                <input type="button" value="Click" onClick={ () => HelloFunction(this.props.name) } />
+            </div>
+        )
+    }
+}
+
