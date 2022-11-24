@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 import Table from 'react-bootstrap/Table';
 
 export const Difference = () => {
@@ -78,6 +79,22 @@ export const Constructor = () => {
             </ul>
             <h3>Class Constructor({std.name}--{std.age})</h3>
 
+        </>
+    )
+}
+
+
+export const HookState = () => {
+    const [firstValue,setValue] = useState({
+        name : "syed Momin",
+        age : 20
+    })
+
+    return (
+        <>
+        <h3>Hooks in react</h3>
+        <h5>{firstValue.name}</h5>
+        <h5>{firstValue.age}</h5>
         </>
     )
 }
