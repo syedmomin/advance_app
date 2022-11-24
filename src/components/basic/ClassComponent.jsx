@@ -50,7 +50,42 @@ export class ClassEvent extends Component {
         }
         return (
             <div>
-                <input type="button" value="Click" onClick={ () => HelloFunction(this.props.name) } />
+                <input type="button" value="Click" onClick={() => HelloFunction(this.props.name)} />
+            </div>
+        )
+    }
+}
+
+
+export class ClassLifeCycle extends Component {
+
+    render() {
+
+        return (
+            <div>
+                <h3>Lifecycle of Components</h3>
+                <ul>
+                    <li>Mounting</li>
+                    <li>Updating</li>
+                    <li>Error Handling</li>
+                    <li>Unmounting</li>
+                </ul>
+                <h3>Mounting</h3>
+                <ul>
+                    <li>In React JS, Mounting means putting elements into the DOM.</li>
+                    <li>In this phase, an instance of a component is being created and inserted into the DOM.</li>
+                </ul>
+                <h3>Updating</h3>
+                <ul>
+                    <li>In React JS, the next phase in the lifecycle is when a component is updated.</li>
+                    <li>A component is updated whenever there is a change in the component’s state or props.</li>
+                </ul>
+                <h3>Unmounting</h3>
+                <ul>
+                    <li>In React JS, the next phase in the lifecycle is when a component is removed from the DOM, or unmounting as React likes to call it.</li>
+                </ul>
+               
+               
             </div>
         )
     }

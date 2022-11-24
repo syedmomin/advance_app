@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import {Difference,PropsDes,PropsType,Constructor,HookState} from "./components/basic/FuncnalComponent";
-import {ClassConstructor,ClassState,ClassEvent} from "./components/basic/ClassComponent";
+import {ClassConstructor,ClassState,ClassEvent,ClassLifeCycle} from "./components/basic/ClassComponent";
 
 function App() {  
   const sideBarMenu = [
@@ -48,7 +48,7 @@ function App() {
     {
         path: "/lifecyle",
         name: "life cycle",
-        componentName: <ClassEvent name="momin"/>
+        componentName: <ClassLifeCycle/>
     },
     {
         path: "/phase",
