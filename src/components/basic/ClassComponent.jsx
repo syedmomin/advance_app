@@ -84,9 +84,47 @@ export class ClassLifeCycle extends Component {
                 <ul>
                     <li>In React JS, the next phase in the lifecycle is when a component is removed from the DOM, or unmounting as React likes to call it.</li>
                 </ul>
-               
-               
+
+
             </div>
+        )
+    }
+}
+
+export class LifeCycleMounting extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            name: "momin"
+        }
+        console.log("Mounting 1 Constructor Invoked..");
+    }
+
+    static getDerivedStateFromProps(props, state) {
+        console.log(props, state);
+        return null
+    }
+    componentDidMount() {
+        console.log("Mounting 2 componentDidMount Invoked..");
+    }
+    render() {
+        return (
+            <>
+                <h3>React has four built-in methods that gets called, in this order, when mounting a component:</h3>
+                <strong>
+                    <ul>
+                        <li>constructor(props)</li>
+                        <li>static getDerivedStateFromProps(props, state)</li>
+                        <li>render()</li>
+                        <li>componentDidMount()</li>
+                    </ul>
+                    <div>
+                        <h1>{this.state.name}</h1>
+                        <h1>{this.props.city}</h1>
+                    </div>
+                </strong>
+            </>
         )
     }
 }
