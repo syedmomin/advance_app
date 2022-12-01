@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 
 export const Difference = () => {
@@ -98,3 +98,14 @@ export const HookState = () => {
         </>
     )
 }
+
+
+
+function StudentData({std}) {
+    return (
+      <div>
+        <h1>I am {std.name} and I am {std.age} years old.</h1>
+      </div>
+    )
+  }
+
