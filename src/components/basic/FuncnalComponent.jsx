@@ -109,7 +109,7 @@ function StudentData({std}) {
     )
   }
 
-export const FunctionUseEffect = () => {
+export const ListandKey = () => {
     // const students = ["Adil","Kumar","Prem","Zain"];
     // let studentNames = students.map((std, index) => <li key={index}>{ std }</li>);
     // const numbers = [2,4,6,8];
@@ -146,7 +146,7 @@ export const FunctionUseEffect = () => {
   }
 
 
-  export const ListandKey = () => {
+  export const FunctionUseEffect = () => {
 
     let [count, setCount] = useState(0)
     let [name, setName] = useState('momin')
@@ -170,7 +170,7 @@ export const FunctionUseEffect = () => {
         <h1>{count}</h1>
         <h1>{name}</h1>
         <button onClick={() => setCount(count + 1)}>Update State</button>
-        <button onClick={() => setName(name = 'Kumar')}>Update Name</button>
+        <button onClick={() => setName(name = 'dany')}>Update Name</button>
       </div>
     )
   }
