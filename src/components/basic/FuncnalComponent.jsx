@@ -109,3 +109,69 @@ function StudentData({std}) {
     )
   }
 
+export const FunctionUseEffect = () => {
+    // const students = ["Adil","Kumar","Prem","Zain"];
+    // let studentNames = students.map((std, index) => <li key={index}>{ std }</li>);
+    // const numbers = [2,4,6,8];
+    // const result = numbers.map(num => <h1>{num = num * 2}</h1>);
+    const students = [
+      {
+        id: 1,
+        name: "momin",
+        age: 23
+      },
+      {
+        id: 2,
+        name: "abdul",
+        age: 25
+      },
+      {
+        id: 3,
+        name: "syed",
+        age: 27
+      }
+    ]
+  
+    return (
+      <div>
+      { students.map(std => <StudentData key={std.id} std={std}/> ) }
+        {/* { <ul>{ studentNames }</ul> } */}
+  
+        {/* { students.map(std => <Student std={std}/> ) } */}
+        {/* {result} */}
+        {/* { students.map(std => <h1>{ std }</h1>) } */}
+        {/* { numbers.map(num => <h1>{num = num * 2}</h1>) } */}
+      </div>
+    )
+  }
+
+
+  export const ListandKey = () => {
+
+    let [count, setCount] = useState(0)
+    let [name, setName] = useState('momin')
+    // useEffect( () => {
+    //     console.log("Hello I am Effect = " + count)
+    // }, [] )
+    // useEffect(() => {
+    //   console.log("Hello I am Effect = " + count)
+    // }, [count, name])
+  
+    useEffect(() => {
+      console.log("Hello I am Effect = " + count)
+    }, [count])
+  
+    useEffect(() => {
+      console.log("Hello: " + name)
+    }, [name])
+  
+    return (
+      <div>
+        <h1>{count}</h1>
+        <h1>{name}</h1>
+        <button onClick={() => setCount(count + 1)}>Update State</button>
+        <button onClick={() => setName(name = 'Kumar')}>Update Name</button>
+      </div>
+    )
+  }
+  
