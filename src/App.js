@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import {Difference,PropsDes,PropsType,Constructor,HookState,ListandKey,FunctionUseEffect,FunctionUseContact,FunctionUseStateObject} from "./components/basic/FuncnalComponent";
+import {Difference,PropsDes,PropsType,Constructor,HookState,ListandKey,FunctionUseEffect,FunctionSimpleForm,FunctionUseStateObject} from "./components/basic/FuncnalComponent";
 import {ClassConstructor,ClassState,ClassEvent,ClassLifeCycle,LifeCycleMounting} from "./components/basic/ClassComponent";
 
 
@@ -72,9 +72,9 @@ function App() {
         componentName: <FunctionUseEffect/>
     },
     {
-        path: "/usecontant",
-        name: "usecontant",
-        componentName: <FunctionUseContact />
+        path: "/simpleform",
+        name: "simple form",
+        componentName: <FunctionSimpleForm />
     }
 ]
 

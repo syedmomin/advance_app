@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
-import { useState, useEffect } from 'react';
-// import  from 'react-bootstrap/Table';
-import { Button, Table } from 'react-bootstrap';
+import {react, useState, useEffect } from 'react';
+import { Button, Table ,Form } from 'react-bootstrap';
 export const Difference = () => {
   return (
     <>
@@ -212,11 +211,20 @@ export const FunctionUseEffect = () => {
 
 
 
-export const FunctionUseContact = () => {
+export const FunctionSimpleForm = () => {
 
   return (
     <>
-      <h1>dsdsdsadsa</h1>
+    <h1>Simple Form in controlled Component</h1>
+      <Form>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Eneter your name</Form.Label>
+        <Form.Control type="text" placeholder="Enter your name" />
+      </Form.Group>
+      <Button variant="primary" type="change state">
+        Submit
+      </Button>
+    </Form>
     </>
   )
 }
