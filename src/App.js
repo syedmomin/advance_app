@@ -1,7 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import {Difference,PropsDes,PropsType,Constructor,HookState,ListandKey,FunctionUseEffect} from "./components/basic/FuncnalComponent";
+import {Difference,PropsDes,PropsType,Constructor,HookState,ListandKey,FunctionUseEffect,FunctionUseContact,FunctionUseStateObject} from "./components/basic/FuncnalComponent";
 import {ClassConstructor,ClassState,ClassEvent,ClassLifeCycle,LifeCycleMounting} from "./components/basic/ClassComponent";
+
 
 function App() {  
   const sideBarMenu = [
@@ -61,6 +62,11 @@ function App() {
         componentName: <ListandKey/>
     },
     {
+        path: "/stateobject",
+        name: "state object",
+        componentName: <FunctionUseStateObject/>
+    },
+    {
         path: "/useffect",
         name: "useeffect",
         componentName: <FunctionUseEffect/>
@@ -68,7 +74,7 @@ function App() {
     {
         path: "/usecontant",
         name: "usecontant",
-        componentName: <LifeCycleMounting city="Karachi" />
+        componentName: <FunctionUseContact />
     }
 ]
 
@@ -81,7 +87,7 @@ return (
                     return <Link to={sideNav.path} className="sideLink" key={index}>{sideNav.name.toUpperCase()}</Link>
                 })}
             </div>
-            <div class="main">
+            <div className="main">
                 <Routes>
                 {sideBarMenu.map((sideNav, index) => {
                     return <Route path={sideNav.path} element={sideNav.componentName} key={index}/>
