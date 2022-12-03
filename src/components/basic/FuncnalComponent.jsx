@@ -187,20 +187,17 @@ export const FunctionUseEffect = () => {
   let [name, setName] = useState('momin')
 
   // har chezz k side effect use effect
+
   // useEffect( () => {
   //     console.log("Hello I am Effect = " + count)
   // }, [] )
-  // useEffect(() => {
-  //   console.log("Hello I am Effect = " + count)
-  // }, [count, name])
+  
+  // use effect render every component load and update component load and handle with prope and state  
 
   useEffect(() => {
     console.log("Hello I am Effect = " + count)
-  }, [count])
+  }, [count, name])
 
-  useEffect(() => {
-    console.log("Hello: " + name)
-  }, [name])
 
   return (
     <div>
