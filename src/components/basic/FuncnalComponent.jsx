@@ -213,13 +213,24 @@ export const FunctionUseEffect = () => {
 
 export const FunctionSimpleForm = () => {
 
+  const [setText,updateText]= useState("hello")
+
+  const handleChange = (e) => {
+    updateText( e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert('An essay was submitted: ' + setText);
+  }
+
   return (
     <>
     <h1>Simple Form in controlled Component</h1>
-      <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Eneter your name</Form.Label>
-        <Form.Control type="text" placeholder="Enter your name" />
+      <Form onSubmit={handleSubmit}>
+      <Form.Group className="mb-3">
+        <Form.Label>Eneter your text</Form.Label>
+        <Form.Control type="text" placeholder="Enter your text" onChange={handleChange}/>
       </Form.Group>
       <Button variant="primary" type="change state">
         Submit
